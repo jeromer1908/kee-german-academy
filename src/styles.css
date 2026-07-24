@@ -1,0 +1,98 @@
+@import "tailwindcss" source(none);
+@source "../src";
+
+@theme {
+  --color-bg: #090909;
+  --color-bg-2: #111111;
+  --color-card: #141414;
+  --color-gold: #D4AF37;
+  --color-gold-2: #F2C94C;
+  --color-paragraph: #BDBDBD;
+  --color-line: rgba(255,255,255,0.08);
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: #090909;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #D4AF37;
+  color: #090909;
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+@utility text-gold {
+  color: var(--color-gold);
+}
+
+@utility bg-gold-gradient {
+  background: linear-gradient(135deg, #F2C94C 0%, #D4AF37 55%, #A9862A 100%);
+}
+
+@utility text-gold-gradient {
+  background: linear-gradient(135deg, #F2C94C 0%, #D4AF37 60%, #A9862A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility glass-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+@utility gold-glow {
+  box-shadow: 0 0 60px -10px rgba(212,175,55,0.35), 0 0 120px -40px rgba(212,175,55,0.25);
+}
+
+@utility container-x {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* subtle grain / gold radial background */
+.hero-gradient {
+  background:
+    radial-gradient(1200px 600px at 15% 20%, rgba(212,175,55,0.18), transparent 60%),
+    radial-gradient(900px 500px at 85% 80%, rgba(242,201,76,0.10), transparent 60%),
+    #090909;
+}
+
+.section-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: radial-gradient(600px 300px at 20% 0%, rgba(212,175,55,0.10), transparent 60%);
+  pointer-events: none;
+}
+
+/* marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+/* Hide default number spin */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
