@@ -1,19 +1,22 @@
 import { useTranslation } from "react-i18next";
 import { MonitorPlay, Milestone, Briefcase } from "lucide-react";
 import { Reveal, SectionLabel } from "./Reveal";
+import { ensureArray } from "@/lib/utils";
 
 const icons = [MonitorPlay, Milestone, Briefcase];
 
 export function About() {
   const { t } = useTranslation();
-  const points = t("about.points", { returnObjects: true }) as { t: string; d: string }[];
+  const points = ensureArray<{ t: string; d: string }>(t("about.points", { returnObjects: true }));
 
   return (
     <section id="about" className="relative section-glow py-28 md:py-36">
       <div className="container-x grid gap-16 lg:grid-cols-2 lg:gap-24">
         {/* Left column */}
         <div>
-          <Reveal><SectionLabel>{t("about.label")}</SectionLabel></Reveal>
+          <Reveal>
+            <SectionLabel>{t("about.label")}</SectionLabel>
+          </Reveal>
 
           <Reveal delay={0.1}>
             <h2 className="font-display text-[clamp(2.75rem,5.5vw,5rem)] leading-[1.05] text-white">

@@ -2,19 +2,22 @@ import { useTranslation } from "react-i18next";
 import { Reveal, SectionLabel } from "./Reveal";
 import { ArrowUpRight, Star } from "lucide-react";
 import { motion } from "framer-motion";
+import { ensureArray } from "@/lib/utils";
 
 export function Courses() {
   const { t } = useTranslation();
-  const list = t("courses.list", { returnObjects: true }) as {
-    level: string; duration: string; price: string; desc: string;
-  }[];
+  const list = ensureArray<{ level: string; duration: string; price: string; desc: string }>(
+    t("courses.list", { returnObjects: true }),
+  );
 
   return (
     <section id="courses" className="relative py-28 md:py-36 bg-[color:var(--color-bg-2)]/40">
       <div className="container-x">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <Reveal><SectionLabel>{t("courses.label")}</SectionLabel></Reveal>
+            <Reveal>
+              <SectionLabel>{t("courses.label")}</SectionLabel>
+            </Reveal>
             <Reveal delay={0.1}>
               <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.02] text-white">
                 {t("courses.heading1")}{" "}
@@ -75,8 +78,8 @@ export function Courses() {
                     </div>
                   </div>
 
-                  
-                   <a href="#contact"
+                  <a
+                    href="#contact"
                     className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full py-4 text-sm font-semibold transition-all ${
                       popular
                         ? "bg-gold-gradient text-black hover:shadow-[0_0_50px_-10px_rgba(212,175,55,0.7)]"

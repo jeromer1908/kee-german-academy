@@ -2,17 +2,22 @@ import { useTranslation } from "react-i18next";
 import { GraduationCap, Briefcase, Globe, ArrowRight } from "lucide-react";
 import { Reveal, SectionLabel } from "./Reveal";
 import studyImg from "@/assets/study-germany.jpg";
+import { ensureArray } from "@/lib/utils";
 
 const icons = [GraduationCap, Briefcase, Globe];
 
 export function WhyGerman() {
   const { t } = useTranslation();
-  const cards = t("why.cards", { returnObjects: true }) as { t: string; d: string }[];
+  const cards = ensureArray<{ t: string; d: string }>(t("why.cards", { returnObjects: true }), [
+    { t: "", d: "" },
+  ]);
 
   return (
     <section id="why" className="relative py-28 md:py-36">
       <div className="container-x">
-        <Reveal><SectionLabel>{t("why.label")}</SectionLabel></Reveal>
+        <Reveal>
+          <SectionLabel>{t("why.label")}</SectionLabel>
+        </Reveal>
         <Reveal delay={0.1}>
           <h2 className="max-w-4xl font-display text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.02] text-white">
             {t("why.heading")}

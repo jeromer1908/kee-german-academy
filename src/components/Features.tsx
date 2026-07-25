@@ -1,12 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { Reveal, SectionLabel } from "./Reveal";
 import { Video, BookOpen, Mic, LineChart, Users, MessageCircle } from "lucide-react";
+import { ensureArray } from "@/lib/utils";
 
 const icons = [Video, BookOpen, Mic, LineChart, Users, MessageCircle];
 
 export function Features() {
   const { t } = useTranslation();
-  const items = t("features.items", { returnObjects: true }) as { t: string; d: string }[];
+  const items = ensureArray<{ t: string; d: string }>(t("features.items", { returnObjects: true }));
 
   const marqueeWords = [
     "Live Classes",
@@ -19,16 +20,16 @@ export function Features() {
 
   return (
     <section id="features" className="relative py-28 md:py-36 overflow-hidden">
-     {/* marquee band */}
-<div className="absolute top-8 left-0 right-0 overflow-hidden bg-[color:var(--color-gold)] py-4">
-  <div className="marquee-track flex w-max whitespace-nowrap gap-16 font-display text-6xl italic text-black">
-    {[...marqueeWords, ...marqueeWords, ...marqueeWords].map((w, i) => (
-      <span key={i} className="flex items-center gap-16">
-        {w} <span className="text-white">✦</span>
-      </span>
-    ))}
-  </div>
-</div>
+      {/* marquee band */}
+      <div className="absolute top-8 left-0 right-0 overflow-hidden bg-[color:var(--color-gold)] py-4">
+        <div className="marquee-track flex w-max whitespace-nowrap gap-16 font-display text-6xl italic text-black">
+          {[...marqueeWords, ...marqueeWords, ...marqueeWords].map((w, i) => (
+            <span key={i} className="flex items-center gap-16">
+              {w} <span className="text-white">✦</span>
+            </span>
+          ))}
+        </div>
+      </div>
 
       <div className="container-x relative">
         <div className="pt-24">

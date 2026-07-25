@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useRef, useEffect, useState } from "react";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import heroImg from "@/assets/hero.png";
+import { ensureArray } from "@/lib/utils";
 
 export function Hero() {
   const { t } = useTranslation();
@@ -11,7 +12,11 @@ export function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 160]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.2]);
 
-  const words = t("hero.words", { returnObjects: true }) as string[];
+  const words = ensureArray<string>(t("hero.words", { returnObjects: true }), [
+    "Build Your Future.",
+    "Build Your Career.",
+    "Build Your Dreams.",
+  ]);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -23,7 +28,11 @@ export function Hero() {
   }, [words.length]);
 
   return (
-    <section id="home" ref={ref} className="relative isolate overflow-hidden hero-gradient min-h-[100svh]">
+    <section
+      id="home"
+      ref={ref}
+      className="relative isolate overflow-hidden hero-gradient min-h-[100svh]"
+    >
       {/* background */}
       <motion.div style={{ y, opacity }} className="absolute inset-0 -z-10">
         <img
@@ -101,11 +110,13 @@ export function Hero() {
           >
             <MessageCircle size={16} /> {t("cta.enroll")}
           </a>
-          
-          <a  href="#contact"
+
+          <a
+            href="#contact"
             className="group inline-flex items-center gap-2 rounded-full border border-[color:var(--color-gold)]/50 bg-white/[0.02] px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-[color:var(--color-gold)] hover:bg-[color:var(--color-gold)]/10"
           >
-            {t("cta.demo")} <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            {t("cta.demo")}{" "}
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </a>
         </motion.div>
 

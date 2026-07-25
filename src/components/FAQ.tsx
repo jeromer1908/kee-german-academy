@@ -3,16 +3,19 @@ import { useTranslation } from "react-i18next";
 import { Reveal, SectionLabel } from "./Reveal";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+import { ensureArray } from "@/lib/utils";
 
 export function FAQ() {
   const { t } = useTranslation();
-  const list = t("faq.list", { returnObjects: true }) as { q: string; a: string }[];
+  const list = ensureArray<{ q: string; a: string }>(t("faq.list", { returnObjects: true }));
   const [open, setOpen] = useState<number | null>(0);
 
   return (
     <section id="faq" className="relative py-28 md:py-36">
       <div className="container-x">
-        <Reveal><SectionLabel>{t("faq.label")}</SectionLabel></Reveal>
+        <Reveal>
+          <SectionLabel>{t("faq.label")}</SectionLabel>
+        </Reveal>
         <Reveal delay={0.1}>
           <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.02] text-white">
             {t("faq.heading1")}{" "}
@@ -39,7 +42,9 @@ export function FAQ() {
                 >
                   <motion.span
                     className={`grid h-9 w-9 shrink-0 place-items-center rounded-full border text-[color:var(--color-gold)] ${
-                      isOpen ? "border-[color:var(--color-gold)]" : "border-[color:var(--color-line)]"
+                      isOpen
+                        ? "border-[color:var(--color-gold)]"
+                        : "border-[color:var(--color-line)]"
                     }`}
                   >
                     {isOpen ? <Minus size={16} /> : <Plus size={16} />}
