@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Reveal, SectionLabel } from "./Reveal";
-import { ArrowUpRight, Star } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { ensureArray } from "@/lib/utils";
 
@@ -47,12 +47,6 @@ export function Courses() {
                       : "border-[color:var(--color-line)] bg-[color:var(--color-card)]/60 hover:border-[color:var(--color-gold)]/30"
                   }`}
                 >
-                  {popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gold-gradient px-4 py-1.5 text-[11px] font-semibold uppercase tracking-widest text-black">
-                      <Star size={12} fill="currentColor" /> {t("courses.popular")}
-                    </div>
-                  )}
-
                   <div className="flex items-start justify-between">
                     <div className="font-display text-7xl italic text-gold-gradient">{c.level}</div>
                     <span className="rounded-full bg-white/[0.06] px-3.5 py-1.5 text-[11px] font-medium uppercase tracking-widest text-white/60">
@@ -78,8 +72,11 @@ export function Courses() {
                     </div>
                   </div>
 
-                  <a
-                    href="#contact"
+                  <button
+                    type="button"
+                    onClick={() =>
+                      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+                    }
                     className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full py-4 text-sm font-semibold transition-all ${
                       popular
                         ? "bg-gold-gradient text-black hover:shadow-[0_0_50px_-10px_rgba(212,175,55,0.7)]"
@@ -87,7 +84,7 @@ export function Courses() {
                     }`}
                   >
                     {t("cta.enroll")} <ArrowUpRight size={16} />
-                  </a>
+                  </button>
                 </motion.div>
               </Reveal>
             );

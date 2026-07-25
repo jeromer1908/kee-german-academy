@@ -62,7 +62,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-4 font-display text-[clamp(2.25rem,6.5vw,6rem)] leading-[1.05] text-white min-h-[1.9em]"
+          className="mt-4 font-display text-[clamp(3rem,7.5vw,6rem)] leading-[1.05] text-white min-h-[1.9em]"
         >
           {t("hero.title1")}
           <br />
@@ -104,20 +104,26 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.75 }}
           className="mt-6 flex flex-wrap gap-4"
         >
-          <a
-            href="#contact"
+          <button
+            type="button"
+            onClick={() =>
+              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+            }
             className="group inline-flex items-center gap-2 rounded-full bg-gold-gradient px-7 py-3.5 text-sm font-semibold text-black transition-all hover:scale-[1.03] hover:shadow-[0_0_60px_-10px_rgba(212,175,55,0.7)]"
           >
             <MessageCircle size={16} /> {t("cta.enroll")}
-          </a>
+          </button>
 
-          <a
-            href="#contact"
+          <button
+            type="button"
+            onClick={() =>
+              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+            }
             className="group inline-flex items-center gap-2 rounded-full border border-[color:var(--color-gold)]/50 bg-white/[0.02] px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-[color:var(--color-gold)] hover:bg-[color:var(--color-gold)]/10"
           >
             {t("cta.demo")}{" "}
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-          </a>
+          </button>
         </motion.div>
 
         <motion.p
