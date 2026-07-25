@@ -32,40 +32,74 @@ export const resources = {
         heading: "German, made practical.",
         copy: "Kee German Academy helps students and working professionals learn German through live, interactive online classes. The training is designed to make German simple, useful, and goal-oriented for exams, higher studies, and career growth.",
         points: [
-          { t: "Live & Interactive", d: "Real-time classes with a mentor, not pre-recorded videos." },
-          { t: "A1 to B1 Pathway", d: "A structured journey from your first word to confident conversation." },
-          { t: "Career-Focused", d: "Practical German built for study, work, and global opportunity." },
+          {
+            t: "Live & Interactive",
+            d: "Real-time classes with a mentor, not pre-recorded videos.",
+          },
+          {
+            t: "A1 to B1 Pathway",
+            d: "A structured journey from your first word to confident conversation.",
+          },
+          {
+            t: "Career-Focused",
+            d: "Practical German built for study, work, and global opportunity.",
+          },
         ],
       },
       why: {
         label: "02 — Why Learn German",
         heading: "One language. A world of doors.",
-        intro: "German can open doors to education, global careers, and stronger communication opportunities.",
+        intro:
+          "German can open doors to education, global careers, and stronger communication opportunities.",
         cards: [
-          { t: "Study in Germany", d: "Access a stronger language foundation for university plans and life in Germany." },
-          { t: "Career Growth", d: "Build skills that support roles in German-linked companies and international work environments." },
-          { t: "Global Confidence", d: "Speak with clarity in interviews, exams, and daily conversation." },
+          {
+            t: "Study in Germany",
+            d: "Access a stronger language foundation for university plans and life in Germany.",
+          },
+          {
+            t: "Career Growth",
+            d: "Build skills that support roles in German-linked companies and international work environments.",
+          },
+          {
+            t: "Global Confidence",
+            d: "Speak with clarity in interviews, exams, and daily conversation.",
+          },
         ],
       },
       courses: {
         label: "03 — Courses",
         heading1: "Choose",
-  heading2: "your",
-  heading3: "level.",
+        heading2: "your",
+        heading3: "level.",
         note: "Transparent pricing. Small batches. Real mentorship.",
         popular: "Most Popular",
         month: "/month",
         months: "months",
         list: [
-          { level: "A1", duration: "3", price: "₹5,000", desc: "Start from zero with greetings, grammar basics, essential vocabulary, and simple everyday conversation." },
-          { level: "A2", duration: "3", price: "₹7,500", desc: "Build confidence with better sentence flow, richer vocabulary, and more practical speaking." },
-          { level: "B1", duration: "4", price: "₹10,000", desc: "Learn to communicate more independently for study, work, and real-world situations." },
+          {
+            level: "A1",
+            duration: "3",
+            price: "₹5,000",
+            desc: "Start from zero with greetings, grammar basics, essential vocabulary, and simple everyday conversation.",
+          },
+          {
+            level: "A2",
+            duration: "3",
+            price: "₹7,500",
+            desc: "Build confidence with better sentence flow, richer vocabulary, and more practical speaking.",
+          },
+          {
+            level: "B1",
+            duration: "4",
+            price: "₹10,000",
+            desc: "Learn to communicate more independently for study, work, and real-world situations.",
+          },
         ],
       },
       features: {
         label: "04 — What's Included",
         heading1: "Everything you need to",
-  heading2: "succeed.",
+        heading2: "succeed.",
         intro: "Designed to keep you consistent, supported, and actively involved.",
         items: [
           { t: "Live Online Classes", d: "Learn in real time with direct trainer support." },
@@ -80,22 +114,52 @@ export const resources = {
         label: "05 — Student Reviews",
         heading: "Voices from our classroom.",
         list: [
-          { q: "The live classes and speaking practice helped me become more confident in just a few months.", n: "Karan", r: "Engineering Student" },
-          { q: "The small batch format gave me personal attention and helped me prepare better for my level exams.", n: "Rahul", r: "Working Professional" },
-          { q: "Simple explanations, flexible support, and regular practice made it easier to stay consistent.", n: "Priyanka", r: "University Aspirant" },
+          {
+            q: "The live classes and speaking practice helped me become more confident in just a few months.",
+            n: "Karan",
+            r: "Engineering Student",
+          },
+          {
+            q: "The small batch format gave me personal attention and helped me prepare better for my level exams.",
+            n: "Rahul",
+            r: "Working Professional",
+          },
+          {
+            q: "Simple explanations, flexible support, and regular practice made it easier to stay consistent.",
+            n: "Priyanka",
+            r: "University Aspirant",
+          },
         ],
       },
       faq: {
         label: "06 — FAQ",
-         heading1: "Questions,",
-         heading2: "answered.",
+        heading1: "Questions,",
+        heading2: "answered.",
         list: [
-          { q: "Do I need any prior knowledge of German?", a: "No. The beginner-level course is designed for learners starting from zero." },
-          { q: "Are the classes live or recorded?", a: "The main classes are live and interactive, so you can ask questions and practice in real time." },
-          { q: "How big are the batches?", a: "Batches are kept small to improve attention, participation, and speaking practice." },
-          { q: "Will this help me study or work in Germany?", a: "Yes. The course builds practical language skills that support higher studies, career plans, and exam preparation." },
-          { q: "What do the fees include?", a: "Fees can include live classes, practice support, and study materials depending on the course plan." },
-          { q: "How do I enroll or book a demo?", a: "Contact us via WhatsApp, phone, or the contact form to book a demo or enroll." },
+          {
+            q: "Do I need any prior knowledge of German?",
+            a: "No. The beginner-level course is designed for learners starting from zero.",
+          },
+          {
+            q: "Are the classes live or recorded?",
+            a: "The main classes are live and interactive, so you can ask questions and practice in real time.",
+          },
+          {
+            q: "How big are the batches?",
+            a: "Batches are kept small to improve attention, participation, and speaking practice.",
+          },
+          {
+            q: "Will this help me study or work in Germany?",
+            a: "Yes. The course builds practical language skills that support higher studies, career plans, and exam preparation.",
+          },
+          {
+            q: "What do the fees include?",
+            a: "Fees can include live classes, practice support, and study materials depending on the course plan.",
+          },
+          {
+            q: "How do I enroll or book a demo?",
+            a: "Contact us via WhatsApp, phone, or the contact form to book a demo or enroll.",
+          },
         ],
       },
       contact: {
@@ -156,8 +220,14 @@ export const resources = {
         heading: "Deutsch, praktisch gelernt.",
         copy: "Die Kee German Academy hilft Studierenden und Berufstätigen, Deutsch durch interaktive Online-Live-Kurse zu lernen. Das Training ist einfach, nützlich und zielorientiert — für Prüfungen, Studium und Karriere.",
         points: [
-          { t: "Live & Interaktiv", d: "Echtzeit-Unterricht mit einem Mentor, keine Aufzeichnungen." },
-          { t: "A1 bis B1 Weg", d: "Ein strukturierter Weg vom ersten Wort bis zum sicheren Gespräch." },
+          {
+            t: "Live & Interaktiv",
+            d: "Echtzeit-Unterricht mit einem Mentor, keine Aufzeichnungen.",
+          },
+          {
+            t: "A1 bis B1 Weg",
+            d: "Ein strukturierter Weg vom ersten Wort bis zum sicheren Gespräch.",
+          },
           { t: "Karriere-Fokus", d: "Praktisches Deutsch für Studium, Beruf und globale Chancen." },
         ],
       },
@@ -166,9 +236,18 @@ export const resources = {
         heading: "Eine Sprache. Eine Welt voller Türen.",
         intro: "Deutsch öffnet Türen zu Bildung, globalen Karrieren und stärkerer Kommunikation.",
         cards: [
-          { t: "Studium in Deutschland", d: "Zugang zu erstklassigen, günstigen oder kostenlosen Universitäten." },
-          { t: "Karriere-Wachstum", d: "Gefragte Rollen bei deutschen MNCs und sprachnahen Unternehmen." },
-          { t: "Globales Selbstvertrauen", d: "Klar sprechen in Interviews, Prüfungen und im Alltag." },
+          {
+            t: "Studium in Deutschland",
+            d: "Zugang zu erstklassigen, günstigen oder kostenlosen Universitäten.",
+          },
+          {
+            t: "Karriere-Wachstum",
+            d: "Gefragte Rollen bei deutschen MNCs und sprachnahen Unternehmen.",
+          },
+          {
+            t: "Globales Selbstvertrauen",
+            d: "Klar sprechen in Interviews, Prüfungen und im Alltag.",
+          },
         ],
       },
       courses: {
@@ -181,9 +260,24 @@ export const resources = {
         month: "/Monat",
         months: "Monate",
         list: [
-          { level: "A1", duration: "3", price: "₹5.000", desc: "Absolute Anfängergrundlagen — Grüße, Grammatik, Alltagsgespräche." },
-          { level: "A2", duration: "3", price: "₹7.500", desc: "Flüssigkeit aufbauen — Vergangenheit, reicherer Wortschatz, sichere Alltagsinteraktion." },
-          { level: "B1", duration: "4", price: "₹10.000", desc: "Selbstständigkeit — Meinungen äußern, Arbeits- & Studiensituationen, prüfungsbereit." },
+          {
+            level: "A1",
+            duration: "3",
+            price: "₹5.000",
+            desc: "Absolute Anfängergrundlagen — Grüße, Grammatik, Alltagsgespräche.",
+          },
+          {
+            level: "A2",
+            duration: "3",
+            price: "₹7.500",
+            desc: "Flüssigkeit aufbauen — Vergangenheit, reicherer Wortschatz, sichere Alltagsinteraktion.",
+          },
+          {
+            level: "B1",
+            duration: "4",
+            price: "₹10.000",
+            desc: "Selbstständigkeit — Meinungen äußern, Arbeits- & Studiensituationen, prüfungsbereit.",
+          },
         ],
       },
       features: {
@@ -204,9 +298,21 @@ export const resources = {
         label: "05 — Erfahrungen",
         heading: "Stimmen aus unserem Klassenzimmer.",
         list: [
-          { q: "Die Live-Kurse und Sprechpraxis haben mir in wenigen Monaten viel Selbstvertrauen gegeben.", n: "Ananya Sharma", r: "Ingenieurstudentin" },
-          { q: "Kleine Gruppen bedeuten echte Aufmerksamkeit — ideale Prüfungsvorbereitung.", n: "Rahul Mehta", r: "Softwareentwickler" },
-          { q: "Einfache Erklärungen, flexible Unterstützung und regelmäßige Praxis — konsequent bleiben leicht gemacht.", n: "Priya Nair", r: "Berufstätige" },
+          {
+            q: "Die Live-Kurse und Sprechpraxis haben mir in wenigen Monaten viel Selbstvertrauen gegeben.",
+            n: "Ananya Sharma",
+            r: "Ingenieurstudentin",
+          },
+          {
+            q: "Kleine Gruppen bedeuten echte Aufmerksamkeit — ideale Prüfungsvorbereitung.",
+            n: "Rahul Mehta",
+            r: "Softwareentwickler",
+          },
+          {
+            q: "Einfache Erklärungen, flexible Unterstützung und regelmäßige Praxis — konsequent bleiben leicht gemacht.",
+            n: "Priya Nair",
+            r: "Berufstätige",
+          },
         ],
       },
       faq: {
@@ -214,12 +320,30 @@ export const resources = {
         heading1: "Fragen,",
         heading2: "beantwortet.",
         list: [
-          { q: "Brauche ich Vorkenntnisse in Deutsch?", a: "Nein. Der Anfängerkurs beginnt bei Null." },
-          { q: "Sind die Kurse live oder aufgezeichnet?", a: "Die Hauptkurse sind live und interaktiv." },
-          { q: "Wie groß sind die Gruppen?", a: "Klein — für bessere Aufmerksamkeit und Sprechpraxis." },
-          { q: "Hilft mir das für Studium/Arbeit in Deutschland?", a: "Ja. Der Kurs baut praktische Sprachkompetenzen auf." },
-          { q: "Was ist in den Gebühren enthalten?", a: "Live-Kurse, Übungsunterstützung und Materialien — je nach Plan." },
-          { q: "Wie melde ich mich an oder buche eine Demo?", a: "Kontaktiere uns über WhatsApp, Telefon oder das Formular." },
+          {
+            q: "Brauche ich Vorkenntnisse in Deutsch?",
+            a: "Nein. Der Anfängerkurs beginnt bei Null.",
+          },
+          {
+            q: "Sind die Kurse live oder aufgezeichnet?",
+            a: "Die Hauptkurse sind live und interaktiv.",
+          },
+          {
+            q: "Wie groß sind die Gruppen?",
+            a: "Klein — für bessere Aufmerksamkeit und Sprechpraxis.",
+          },
+          {
+            q: "Hilft mir das für Studium/Arbeit in Deutschland?",
+            a: "Ja. Der Kurs baut praktische Sprachkompetenzen auf.",
+          },
+          {
+            q: "Was ist in den Gebühren enthalten?",
+            a: "Live-Kurse, Übungsunterstützung und Materialien — je nach Plan.",
+          },
+          {
+            q: "Wie melde ich mich an oder buche eine Demo?",
+            a: "Kontaktiere uns über WhatsApp, Telefon oder das Formular.",
+          },
         ],
       },
       contact: {
@@ -260,6 +384,8 @@ if (!i18n.isInitialized) {
     fallbackLng: "en",
     interpolation: { escapeValue: false },
     returnObjects: true,
+    react: { useSuspense: false },
+    initImmediate: false,
   });
 }
 
