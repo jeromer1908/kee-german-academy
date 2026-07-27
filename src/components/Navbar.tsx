@@ -44,23 +44,31 @@ export function Navbar() {
       }`}
     >
       <div className="container-x flex items-center justify-between py-4 md:py-5">
-        <a href="#home" className="flex items-center gap-3">
+        <div
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="flex items-center gap-3 cursor-pointer"
+        >
           <img
             src={logo}
             alt="Kee German Academy logo"
             className="h-16 w-16 rounded-lg object-cover"
           />
-        </a>
+        </div>
 
         <nav className="hidden lg:flex items-center gap-8">
           {links.map((l) => (
-            <a
+            <button
               key={l.id}
-              href={`#${l.id}`}
-              className="relative text-xs uppercase tracking-[0.2em] text-white/70 transition-colors hover:text-white"
+              onClick={() => {
+                document.getElementById(l.id)?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="relative text-xs uppercase tracking-[0.2em] text-white/70 transition-colors hover:text-white cursor-pointer bg-transparent border-none p-0"
             >
               {t(`nav.${l.key}`)}
-            </a>
+            </button>
           ))}
         </nav>
 
@@ -88,12 +96,14 @@ export function Navbar() {
             </button>
           </div>
 
-          <a
-            href="#contact"
-            className="hidden sm:inline-flex items-center gap-2 rounded-full bg-gold-gradient px-4 py-2 text-xs font-semibold text-black transition-transform hover:scale-[1.03] hover:shadow-[0_0_40px_-5px_rgba(212,175,55,0.55)]"
+          <button
+            onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="hidden sm:inline-flex items-center gap-2 rounded-full bg-gold-gradient px-4 py-2 text-xs font-semibold text-black transition-transform hover:scale-[1.03] hover:shadow-[0_0_40px_-5px_rgba(212,175,55,0.55)] cursor-pointer"
           >
             <MessageCircle size={14} /> {t("nav.enroll")}
-          </a>
+          </button>
 
           <button
             className="lg:hidden rounded-full border border-[color:var(--color-line)] p-2 text-white"
@@ -115,14 +125,16 @@ export function Navbar() {
           >
             <div className="container-x flex flex-col gap-4 py-6">
               {links.map((l) => (
-                <a
+                <button
                   key={l.id}
-                  href={`#${l.id}`}
-                  onClick={() => setOpen(false)}
-                  className="text-sm uppercase tracking-[0.2em] text-white/80"
+                  onClick={() => {
+                    setOpen(false);
+                    document.getElementById(l.id)?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="text-sm uppercase tracking-[0.2em] text-white/80 cursor-pointer bg-transparent border-none p-0 text-left"
                 >
                   {t(`nav.${l.key}`)}
-                </a>
+                </button>
               ))}
             </div>
           </motion.div>

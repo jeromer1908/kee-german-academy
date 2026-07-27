@@ -1239,7 +1239,7 @@ function Footer() {
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "text-sm text-[color:var(--color-paragraph)]",
-						children: "Hyderabad, India"
+						children: "Chennai, India"
 					})
 				] })
 			]

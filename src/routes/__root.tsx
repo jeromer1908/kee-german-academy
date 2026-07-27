@@ -74,27 +74,112 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Kee German Academy" },
-      { name: "description", content: "Live online German classes — A1 to B1." },
-      { property: "og:site_name", content: "Kee German Academy" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap",
-      },
-    ],
-  }),
+ head: () => ({
+  meta: [
+    { charSet: "utf-8" },
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
+    },
+
+    // SEO
+    {
+      title:
+        "German Language Classes in Chennai | Goethe Exam Coaching | Kee German Academy",
+    },
+    {
+      name: "description",
+      content:
+        "Join Kee German Academy in Chennai for A1, A2, B1 & B2 German language courses. Learn from certified trainers with Goethe exam preparation, online and offline classes. Call +91 9941987164.",
+    },
+    {
+      name: "keywords",
+      content:
+        "German classes Chennai, German language institute Chennai, Learn German Chennai, Goethe exam coaching Chennai, German A1 course Chennai, German A2 course Chennai, German B1 course Chennai, German B2 course Chennai, German language training Chennai",
+    },
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+    {
+      name: "author",
+      content: "Kee German Academy",
+    },
+
+    // Open Graph
+    {
+      property: "og:title",
+      content:
+        "German Language Classes in Chennai | Kee German Academy",
+    },
+    {
+      property: "og:description",
+      content:
+        "A1 to B2 German courses with Goethe exam preparation in Chennai.",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      property: "og:site_name",
+      content: "Kee German Academy",
+    },
+    {
+      property: "og:url",
+      content: "https://kee-german-academy.netlify.app/",
+    },
+    {
+      property: "og:image",
+      content: "https://kee-german-academy.netlify.app/og-image.jpg",
+    },
+
+    // Twitter
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content:
+        "German Language Classes in Chennai | Kee German Academy",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Certified German language training and Goethe exam coaching in Chennai.",
+    },
+    {
+      name: "twitter:image",
+      content: "https://kee-german-academy.netlify.app/og-image.jpg",
+    },
+
+    // Theme
+    {
+      name: "theme-color",
+      content: "#090909",
+    },
+  ],
+
+  links: [
+    {
+      rel: "canonical",
+      href: "https://kee-german-academy.netlify.app/",
+    },
+    { rel: "stylesheet", href: appCss },
+    { rel: "icon", href: "/favicon.ico" },
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    {
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossOrigin: "anonymous",
+    },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap",
+    },
+  ],
+}),
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
@@ -102,11 +187,34 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "LanguageSchool",
+    name: "Kee German Academy",
+    url: "https://kee-german-academy.netlify.app/",
+    telephone: "+91-9941987164",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Chennai",
+      addressRegion: "Tamil Nadu",
+      addressCountry: "IN",
+    },
+  };
+
   return (
     <html lang="en">
       <head>
         <HeadContent />
+
+        {/* SEO Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schema),
+          }}
+        />
       </head>
+
       <body>
         {children}
         <Scripts />

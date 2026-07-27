@@ -4,6 +4,9 @@ import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { ensureArray } from "@/lib/utils";
 
+const WHATSAPP_NUMBER = "919941987164";
+const WHATSAPP_MESSAGE = "Hi! I'd like to enroll in a German course.";
+
 export function Courses() {
   const { t } = useTranslation();
   const list = ensureArray<{ level: string; duration: string; price: string; desc: string }>(
@@ -74,9 +77,10 @@ export function Courses() {
 
                   <button
                     type="button"
-                    onClick={() =>
-                      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
-                    }
+                    onClick={() => {
+                      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+                      window.open(url, "_blank", "noopener,noreferrer");
+                    }}
                     className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full py-4 text-sm font-semibold transition-all ${
                       popular
                         ? "bg-gold-gradient text-black hover:shadow-[0_0_50px_-10px_rgba(212,175,55,0.7)]"

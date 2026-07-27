@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-const WHATSAPP_NUMBER = "911234567890"; // replace with your actual number, country code + number, no + or spaces
+const WHATSAPP_NUMBER = "919941987164";
 const WHATSAPP_MESSAGE = "Hi! I'd like to know more about Kee German Academy courses.";
 
 export function FloatingWhatsApp() {

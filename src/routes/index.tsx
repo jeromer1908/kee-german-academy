@@ -12,6 +12,8 @@ import { FAQ } from "@/components/FAQ";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import Founder from "@/components/Founder";
+import Resources from "@/components/Resources";
 import { ScrollFrameAnimation } from "@/components/ScrollFrameAnimation";
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -53,9 +55,11 @@ function Index() {
         scrollHeightMultiplier={3}
       /> */}
       <About />
+      <Founder />
       <WhyGerman />
       <Courses />
       <Features />
+      <Resources />
       <Reviews />
       <FAQ />
       <Contact />

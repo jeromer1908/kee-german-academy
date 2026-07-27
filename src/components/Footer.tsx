@@ -38,12 +38,14 @@ export function Footer() {
           <ul className="mt-6 space-y-3">
             {navKeys.map((k) => (
               <li key={k}>
-                <a
-                  href={`#${k}`}
-                  className="font-display text-xl text-white/80 transition-colors hover:text-[color:var(--color-gold-2)]"
+                <button
+                  onClick={() => {
+                    document.getElementById(k)?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="font-display text-xl text-white/80 transition-colors hover:text-[color:var(--color-gold-2)] cursor-pointer bg-transparent border-none p-0 text-left"
                 >
                   {t(`nav.${k}`)}
-                </a>
+                </button>
               </li>
             ))}
           </ul>
@@ -56,8 +58,10 @@ export function Footer() {
           <div className="mt-6 flex gap-3">
             {[
               { Icon: MessageCircle, href: "https://wa.me/919876543210" },
-              { Icon: Instagram, href: "https://instagram.com" },
-              { Icon: Mail, href: "mailto:hello@keegermanacademy.com" },
+              {
+                Icon: Instagram,
+                href: "https://www.instagram.com/keegerman.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+              },
             ].map(({ Icon, href }, i) => (
               <a
                 key={i}
@@ -71,9 +75,9 @@ export function Footer() {
             ))}
           </div>
           <p className="mt-8 text-sm text-[color:var(--color-paragraph)]">
-            hello@keegermanacademy.com
+            keegermanacademy@gmail.com
           </p>
-          <p className="text-sm text-[color:var(--color-paragraph)]">Hyderabad, India</p>
+          <p className="text-sm text-[color:var(--color-paragraph)]">Chennai, India</p>
         </div>
       </div>
 

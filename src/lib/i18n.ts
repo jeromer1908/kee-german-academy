@@ -18,6 +18,7 @@ export const resources = {
         enroll: "Enroll Now",
         demo: "Book a Free Demo",
         send: "Send Message",
+        sending: "Sending...",
       },
       hero: {
         eyebrow: "Online German Classes — A1 to B1",
@@ -176,7 +177,7 @@ export const resources = {
         whatsappSub: "Fastest way to ask about batches & demos.",
         instagram: "@keegermanacademy",
         instagramSub: "Social updates and student activity.",
-        email_card: "hello@keegermanacademy.com",
+        email_card: "keegermanacademy@gmail.com",
         emailSub: "Best for detailed questions.",
         sent: "Message sent. We'll reply shortly.",
       },
@@ -206,6 +207,7 @@ export const resources = {
         enroll: "Jetzt anmelden",
         demo: "Kostenlose Demo buchen",
         send: "Nachricht senden",
+        sending: "Wird gesendet...",
       },
       hero: {
         eyebrow: "Online-Deutschkurse — A1 bis B1",
@@ -360,7 +362,7 @@ export const resources = {
         whatsappSub: "Schnellste Antwort zu Gruppen & Demos.",
         instagram: "@keegermanacademy",
         instagramSub: "Updates und Student:innen-Aktivität.",
-        email_card: "hello@keegermanacademy.com",
+        email_card: "keegermanacademy@gmail.com",
         emailSub: "Am besten für ausführliche Fragen.",
         sent: "Nachricht gesendet. Wir melden uns bald.",
       },
