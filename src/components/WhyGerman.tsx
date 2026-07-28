@@ -4,13 +4,15 @@ import { Reveal, SectionLabel } from "./Reveal";
 import studyImg from "@/assets/study-germany.jpg";
 import { ensureArray } from "@/lib/utils";
 
-const icons = [GraduationCap, Briefcase, Globe];
+const icons = [Briefcase, Globe, GraduationCap];
 
 export function WhyGerman() {
   const { t } = useTranslation();
   const cards = ensureArray<{ t: string; d: string }>(t("why.cards", { returnObjects: true }), [
     { t: "", d: "" },
   ]);
+
+  const MainIcon = icons[0];
 
   return (
     <section id="why" className="relative py-28 md:py-36">
@@ -35,7 +37,7 @@ export function WhyGerman() {
             <div className="relative h-full min-h-[560px] overflow-hidden rounded-3xl border border-[color:var(--color-gold)]/25 group">
               <img
                 src={studyImg}
-                alt="Study in Germany"
+                alt={cards[0]?.t || "Career Growth"}
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-1000 group-hover:scale-105"
                 width={1024}
@@ -45,7 +47,7 @@ export function WhyGerman() {
 
               <div className="relative z-10 flex h-full flex-col justify-between p-8">
                 <div className="grid h-14 w-14 place-items-center rounded-full border border-[color:var(--color-gold)]/50 bg-black/50 text-[color:var(--color-gold)] shadow-[0_0_25px_rgba(212,175,55,0.35)] backdrop-blur-sm">
-                  <GraduationCap size={24} />
+                  <MainIcon size={24} />
                 </div>
 
                 <div>
@@ -57,14 +59,6 @@ export function WhyGerman() {
                   </div>
 
                   <p className="max-w-xs text-[color:var(--color-paragraph)]">{cards[0].d}</p>
-
-                  <button
-                    type="button"
-                    className="mt-6 inline-flex items-center gap-2 rounded-full border border-[color:var(--color-gold)]/50 px-6 py-3 text-sm font-medium text-[color:var(--color-gold)] transition-all hover:bg-[color:var(--color-gold)] hover:text-black"
-                  >
-                    {t("why.cta", "Learn More")}
-                    <ArrowRight size={16} />
-                  </button>
                 </div>
               </div>
             </div>

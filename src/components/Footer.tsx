@@ -57,7 +57,7 @@ export function Footer() {
           </div>
           <div className="mt-6 flex gap-3">
             {[
-              { Icon: MessageCircle, href: "https://wa.me/919876543210" },
+              { Icon: MessageCircle, href: "https://wa.me/919941987164" },
               {
                 Icon: Instagram,
                 href: "https://www.instagram.com/keegerman.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",

@@ -54,16 +54,16 @@ export const resources = {
           "German can open doors to education, global careers, and stronger communication opportunities.",
         cards: [
           {
-            t: "Study in Germany",
-            d: "Access a stronger language foundation for university plans and life in Germany.",
-          },
-          {
             t: "Career Growth",
             d: "Build skills that support roles in German-linked companies and international work environments.",
           },
           {
             t: "Global Confidence",
             d: "Speak with clarity in interviews, exams, and daily conversation.",
+          },
+          {
+            t: "Study in Germany",
+            d: "Access a stronger language foundation for university plans and life in Germany.",
           },
         ],
       },
@@ -239,16 +239,16 @@ export const resources = {
         intro: "Deutsch öffnet Türen zu Bildung, globalen Karrieren und stärkerer Kommunikation.",
         cards: [
           {
-            t: "Studium in Deutschland",
-            d: "Zugang zu erstklassigen, günstigen oder kostenlosen Universitäten.",
-          },
-          {
             t: "Karriere-Wachstum",
             d: "Gefragte Rollen bei deutschen MNCs und sprachnahen Unternehmen.",
           },
           {
             t: "Globales Selbstvertrauen",
             d: "Klar sprechen in Interviews, Prüfungen und im Alltag.",
+          },
+          {
+            t: "Studium in Deutschland",
+            d: "Zugang zu erstklassigen, günstigen oder kostenlosen Universitäten.",
           },
         ],
       },

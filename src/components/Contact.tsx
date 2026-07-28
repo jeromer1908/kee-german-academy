@@ -107,7 +107,7 @@ export function Contact() {
           <div className="flex flex-col gap-5">
             <Reveal direction="right">
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919941987164"
                 target="_blank"
                 rel="noreferrer"
                 className="glass-card group flex items-center gap-5 rounded-3xl p-6 transition-all hover:border-[color:var(--color-gold)]/40"
@@ -117,7 +117,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="font-display text-xl text-white">{t("contact.whatsapp")}</div>
-                  <div className="text-sm text-[color:var(--color-paragraph)]">+91 98765 43210</div>
+                  <div className="text-sm text-[color:var(--color-paragraph)]">+91 99419 87164</div>
                   <div className="text-xs text-white/40 mt-1">{t("contact.whatsappSub")}</div>
                 </div>
               </a>
